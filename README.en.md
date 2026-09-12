@@ -32,6 +32,10 @@ The Windows onedir preview is in `release/FH6-Radio-Clean-v0.2-windows/`. Keep i
 - **Material-style desktop UI**: Provides navigation, theme, volume, input, overlay, and log pages with light/dark modes and theme-color settings.
 - **Safe degradation and diagnostics**: Starts without pycaw, XInput, or system media APIs and reports readable status or error details.
 
+<img width="540" height="580" alt="image" src="https://github.com/user-attachments/assets/8efe16f6-7120-4f36-a45c-d14a0f43bfd9" /> 
+
+<img width="730" height="640" alt="image" src="https://github.com/user-attachments/assets/066ab4ed-4f26-442e-bb1e-9c39dd5f40b4" />
+
 ## Hardware validation
 
 The current public version has been validated on real hardware with:
