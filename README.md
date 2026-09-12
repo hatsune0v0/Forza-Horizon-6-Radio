@@ -32,6 +32,13 @@ Windows onedir 预览位于 `release/FH6-Radio-Clean-v0.2-windows/`，必须保�
 - **Material 风格桌面界面**：提供导航、主题、音量、输入、提示和日志页面，支持深色/浅色及主题色设置。
 - **安全降级与可诊断性**：缺少 pycaw、XInput 或系统媒体接口时仍可启动，并显示可读状态或错误信息。
 
+<img width="540" height="580" alt="image" src="https://github.com/user-attachments/assets/8efe16f6-7120-4f36-a45c-d14a0f43bfd9" /> 
+
+<img width="730" height="640" alt="image" src="https://github.com/user-attachments/assets/066ab4ed-4f26-442e-bb1e-9c39dd5f40b4" />
+
+
+
+
 ## 实机验证
 
 当前公开版本已完成以下实机验证：
