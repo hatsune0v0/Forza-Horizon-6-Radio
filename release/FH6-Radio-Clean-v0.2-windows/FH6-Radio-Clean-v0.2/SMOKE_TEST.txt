@@ -1,0 +1,6 @@
+timestamp=20260912-201034
+exe_exists=True
+internal_exists=True
+started_pid=34104
+was_alive_after_3s=True
+leftover_process=False

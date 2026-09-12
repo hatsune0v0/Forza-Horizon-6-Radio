@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fh6-radio-clean-v02"
+version = "0.2.0"
+requires-python = ">=3.12,<3.13"
+
+[project.optional-dependencies]
+ui = ["PySide6>=6.8"]
+audio = ["psutil>=6", "pycaw>=20240210", "comtypes>=1.4"]
+dev = ["pytest>=8"]
+build = ["pyinstaller>=6.10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.setuptools.packages.find]
+include = ["fh6_radio_clean_v02*"]

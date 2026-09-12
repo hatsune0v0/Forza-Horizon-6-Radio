@@ -1,0 +1,19 @@
+FH6 Radio independent rewrite - third-party notices
+
+This source staging tree does not vendor third-party binaries. Dependencies
+used by the optional integrations and build tooling retain their upstream
+licenses:
+
+- Python: Python Software Foundation License
+- PySide6 / Qt: LGPLv3 / GPLv3 and commercial Qt terms (see Qt distribution)
+- PyInstaller: GPLv2 with bootloader exception
+- pytest: MIT License
+- psutil: BSD-3-Clause
+- pycaw: MIT License
+- comtypes: MIT License
+- pywin32 (when used by a local adapter): PSF-based license
+
+The clean rewrite contains no bundled Spotify SDK, Spotify credentials, or
+original executable. Any icon or media asset added by a downstream packager
+must retain its own attribution and license notice.
+
