@@ -21,6 +21,17 @@ uv run pytest -p no:cacheprovider -q
 
 The Windows onedir preview is in `release/FH6-Radio-Clean-v0.2-windows/`. Keep its `_internal` directory. The application does not modify FH6 game files.
 
+## Features
+
+- **FH6 telemetry and scene detection**: Receives Data Out UDP packets and distinguishes free roam, race, transition, paused, and stopped states.
+- **Scene-based volume control**: Smoothly applies the configured target volume to the selected application, including safe mute and scene transitions.
+- **Controlled application selection**: Binds volume control to Spotify, Chrome, or another writable Windows audio session so other applications are not changed.
+- **Keyboard and Xbox/XInput controls**: Supports playback, pause, track changes, and radio start/stop controls, with safe degradation when input APIs are unavailable.
+- **Media overlay and radio information**: Shows playback state, track metadata, and cover art while respecting FH6 foreground and scene display gates.
+- **Custom radio cover**: Allows a user-provided cover resource and falls back to the default cover when it is unavailable.
+- **Material-style desktop UI**: Provides navigation, theme, volume, input, overlay, and log pages with light/dark modes and theme-color settings.
+- **Safe degradation and diagnostics**: Starts without pycaw, XInput, or system media APIs and reports readable status or error details.
+
 ## Hardware validation
 
 The current public version has been validated on real hardware with:
