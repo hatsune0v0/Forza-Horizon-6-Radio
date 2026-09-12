@@ -1,5 +1,32 @@
 # FH6 Radio — independent rewrite work in progress
 
+## 中文说明
+
+这是 FH6 Radio 的独立重写 v0.2 开发版本，包含遥测解析、场景状态机、
+音量目标适配、输入控制、媒体提示协调器和 Material 风格界面外壳。
+项目不包含原始 EXE、解包证据、用户配置或 Spotify 凭据。
+
+### 安装与运行
+
+需要 Python 3.12 和 `uv`：
+
+```text
+uv sync --frozen --extra dev --extra ui
+uv run python -m fh6_radio_clean_v02
+```
+
+运行测试：
+
+```text
+uv run pytest -p no:cacheprovider -q
+```
+
+Windows onedir 预览位于 `release/FH6-Radio-Clean-v0.2-windows/`，必须保留
+其中的 `_internal` 目录。当前版本仍是独立重写开发版，FH6 协议和实际音频
+控制需要用户自行验证；不会修改 FH6 游戏文件。
+
+## English
+
 This repository contains an independently written v0.2 implementation slice.
 It includes a pure state/effect core, settings and fade logic, UDP/runtime
 adapters, keyboard/XInput capture, media/overlay coordination, and a minimal
