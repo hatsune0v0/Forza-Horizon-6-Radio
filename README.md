@@ -1,12 +1,10 @@
-# FH6 Radio — independent rewrite work in progress
+# FH6 Radio
 
-## 中文说明
+[中文](README.md) | [English](README.en.md)
 
-这是 FH6 Radio 的独立重写 v0.2 开发版本，包含遥测解析、场景状态机、
-音量目标适配、输入控制、媒体提示协调器和 Material 风格界面外壳。
-项目不包含原始 EXE、解包证据、用户配置或 Spotify 凭据。
+这是 FH6 Radio 的独立重写 v0.2 开发版本。项目包含遥测解析、场景状态机、音量目标适配、键盘与 Xbox/XInput 输入控制、媒体提示协调器和 Material 风格界面外壳。项目不包含原始 EXE、解包证据、用户配置或 Spotify 凭据。
 
-### 安装与运行
+## 安装与运行
 
 需要 Python 3.12 和 `uv`：
 
@@ -21,66 +19,28 @@ uv run python -m fh6_radio_clean_v02
 uv run pytest -p no:cacheprovider -q
 ```
 
-Windows onedir 预览位于 `release/FH6-Radio-Clean-v0.2-windows/`，必须保留
-其中的 `_internal` 目录。当前版本仍是独立重写开发版，FH6 协议和实际音频
-控制需要用户自行验证；不会修改 FH6 游戏文件。
+Windows onedir 预览位于 `release/FH6-Radio-Clean-v0.2-windows/`，必须保留其中的 `_internal` 目录。程序不会修改 FH6 游戏文件。
 
-## English
+## 实机验证
 
-This repository contains an independently written v0.2 implementation slice.
-It includes a pure state/effect core, settings and fade logic, UDP/runtime
-adapters, keyboard/XInput capture, media/overlay coordination, and a minimal
-Material UI shell. The optional Windows audio bridge is isolated and degrades
-safely when pycaw is unavailable. Spotify account/OAuth integration and FH6
-wire compatibility remain provisional; the existing installed application is
-unchanged.
+当前公开版本已完成以下实机验证：
 
-The new implementation is authored from product requirements and separately
-documented public protocol facts, without copying the historical implementation.
-This is a development method, not a legal certification. See `PROVENANCE.md`.
+- FH6：Data Out 连接和场景状态流程；
+- Spotify：播放状态和目标音频会话控制；
+- Chrome：作为可选受控音频目标进行音量控制。
 
-## Validation
+以上验证针对当前独立重写版本完成。自动化测试仍不能替代不同硬件、系统音频设备和 FH6 配置下的用户复测。
 
-Python 3.12 is required. With `uv`, install the development and UI extras:
+## 功能与限制
 
-```text
-uv sync --frozen --extra dev --extra ui
-uv run pytest -p no:cacheprovider -q
-```
+可选的 Windows `pycaw` 音频桥接在缺少依赖时会安全降级。Spotify 账号/OAuth 登录和 WinRT 媒体元数据不是本 clean-room 版本的公开实现；播放器可通过系统媒体会话或用户已运行的应用进行验证。FH6 324 字节遥测配置仍应由用户按自身 Data Out 设置复核。
 
-The `audio` extra enables the optional Windows pycaw bridge; the `build`
-extra enables PyInstaller. These integrations are intentionally optional.
+场景判断只使用活动状态和比赛排名证据，不使用速度、RPM、轮胎转速、圈数或位置坐标作为判定依据。
 
-Synthetic tests do not certify FH6 wire compatibility or actual audio behavior.
-The provisional 324-byte Horizon packet profile needs independent FH6 validation.
-Only the activity flag and race-position evidence are relevant to scene selection;
-speed, RPM, wheel rotation, lap number and position coordinates must not be used.
-The public staging tree currently contains 14 deterministic test modules; local
-historical test suites are intentionally not part of this clean-room rewrite.
+## 发布目录
 
-## Publication status
+`release/FH6-Radio-Clean-v0.2-windows/` 是完整 Windows onedir 预览，包含 `_internal`、许可声明、校验文件和运行说明。解压后必须保持目录结构完整，不能只复制 EXE。
 
-The public tree intentionally excludes Python environments, caches, build
-output, reverse-engineering evidence, user configuration and credentials.
-The `release/FH6-Radio-Clean-v0.2-windows/` directory contains the complete
-onedir Windows preview, including `_internal`, `SHA256SUMS`, license notices
-and a minimal run guide. Keep that directory intact when extracting it.
+## Clean-room 来源说明
 
-The modules are deliberately adapter-oriented: `Runtime` accepts injected
-audio and process probes, `UdpService` can be stopped without owning a game or
-player process, and `StrictAudioTarget` enforces exact names before writing to
-an injected session provider. `MaterialWindow` exposes navigation and
-callbacks but does not read UDP or audio sessions directly. Passing synthetic
-tests does not certify FH6 wire compatibility or third-party audio control.
-
-## Local build preview
-
-With PyInstaller installed, a preview onedir build can be produced without
-reading the original project:
-
-```text
-python -m PyInstaller --noconfirm --clean fh6_radio_clean_v02.spec --distpath build-preview/dist --workpath build-preview/work
-```
-
-The output is an onedir UI-shell preview, not a release candidate. It does not
-include Spotify OAuth or WinRT metadata integration.
+本仓库是依据产品需求和公开协议资料独立编写的 v0.2 实现，不复制历史 v0.1 实现、解包证据或旧发布目录。详细来源、范围和限制见 [PROVENANCE.md](PROVENANCE.md)。
