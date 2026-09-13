@@ -55,5 +55,6 @@ uv run pytest -q
 
 ## 初版来源
 
+感谢ILLMIUN的授权，解包现成的软件也是节省了不少工作量：XD
 【地平线6自定义电台-支持所有音乐播放软件-哔哩哔哩】 
 https://b23.tv/sFVwHlH
