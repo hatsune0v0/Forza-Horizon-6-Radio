@@ -1,61 +1,54 @@
 # FH6 Radio
 
-[中文](README.md) | [English](README.en.md)
+[中文](README.md) ｜ [English](README.en.md)
 
-This repository contains an independently written FH6 Radio v0.2 implementation. It includes telemetry parsing, a scene state machine, audio-target adaptation, keyboard and Xbox/XInput input control, media/overlay coordination, and a Material style UI shell. It does not contain the original executable, reverse-engineering evidence, user configuration, or Spotify credentials.
+## FH6-radio-1.1.0
 
-## Install and run
+Current release: [FH6-radio-1.1.0](release-prep/FH6-radio-1.1.0/). Download the ZIP from GitHub Releases.
 
-Python 3.12 and `uv` are required:
+FH6 Radio is a Windows desktop volume controller for Forza Horizon 6. It reads game Data Out telemetry, adjusts a selected audio application's volume by driving context, and provides a Material Design settings interface.
 
-```text
-uv sync --frozen --extra dev --extra ui
-uv run python -m fh6_radio_clean_v02
+### Features
+
+- Context-aware volume for free roam, race, transition, menu/pause, and stopped states;
+- Select one controllable audio application by process name or EXE path;
+- Chinese/English, dark/light themes, and keyboard focus states;
+- Keyboard shortcuts and XInput controller bindings;
+- Preset covers, uploaded covers, and crawled cover mode;
+- Cover selections and shortcut changes are saved immediately;
+- Runtime logs, theme-aware scrolling, and log export.
+
+## Installation and Usage
+
+1. Download and extract `FH6-radio-1.1.0.zip` from GitHub Releases to a writable folder.
+2. Keep the directory structure intact and run `FH6 Radio v1.1.0/FH6 Radio v1.1.0.exe`.
+3. Enable Data Out in Forza Horizon 6; the default listener is `127.0.0.1:5300`.
+4. Select an audio application, then configure volume, shortcuts, and radio covers.
+
+Do not copy only the EXE. Keep `_internal` and sibling resources with it. Configuration is stored in `%APPDATA%\\FH6RadioV02`.
+
+## Run From Source
+
+Requires Python 3.12 and [uv](https://docs.astral.sh/uv/):
+
+```powershell
+uv sync --frozen --extra dev --extra build --extra overlay
+uv run fh6-radio-v02-material
 ```
 
-Run the tests with:
+Run tests:
 
-```text
-uv run pytest -p no:cacheprovider -q
+```powershell
+uv run pytest -q
 ```
 
-The Windows onedir preview is in `release/FH6-Radio-Clean-v0.2-windows/`. Keep its `_internal` directory. The application does not modify FH6 game files.
+## Documentation
 
-## Features
+- [Standards index](docs/README.md)
+- [Release and packaging](docs/06-release-and-packaging.md)
+- [Bilingual implementation record](docs/21-bilingual-execution-2026-09-13.md)
+- [Development log](devlog/README.md)
 
-- **FH6 telemetry and scene detection**: Receives Data Out UDP packets and distinguishes free roam, race, transition, paused, and stopped states.
-- **Scene-based volume control**: Smoothly applies the configured target volume to the selected application, including safe mute and scene transitions.
-- **Controlled application selection**: Binds volume control to Spotify, Chrome, or another writable Windows audio session so other applications are not changed.
-- **Keyboard and Xbox/XInput controls**: Supports playback, pause, track changes, and radio start/stop controls, with safe degradation when input APIs are unavailable.
-- **Media overlay and radio information**: Shows playback state, track metadata, and cover art while respecting FH6 foreground and scene display gates.
-- **Custom radio cover**: Allows a user-provided cover resource and falls back to the default cover when it is unavailable.
-- **Material-style desktop UI**: Provides navigation, theme, volume, input, overlay, and log pages with light/dark modes and theme-color settings.
-- **Safe degradation and diagnostics**: Starts without pycaw, XInput, or system media APIs and reports readable status or error details.
+## Privacy and Compatibility
 
-<img width="540" height="580" alt="image" src="https://github.com/user-attachments/assets/8efe16f6-7120-4f36-a45c-d14a0f43bfd9" /> 
-
-<img width="730" height="640" alt="image" src="https://github.com/user-attachments/assets/066ab4ed-4f26-442e-bb1e-9c39dd5f40b4" />
-
-## Hardware validation
-
-The current public version has been validated on real hardware with:
-
-- FH6: Data Out connectivity and scene-state flow;
-- Spotify: playback state and controlled audio-session volume;
-- Chrome: volume control as an optional controlled audio target.
-
-These checks cover the current independent rewrite. Automated tests cannot replace user verification on different hardware, Windows audio devices, or FH6 settings.
-
-## Features and limitations
-
-The optional Windows `pycaw` audio bridge degrades safely when unavailable. Spotify account/OAuth login and WinRT media metadata are not part of this public clean-room implementation; playback can be validated through the system media session or a user-run application. The provisional 324-byte FH6 telemetry profile should still be checked against the user's own Data Out settings.
-
-Scene selection uses only activity state and race-position evidence. It does not use speed, RPM, wheel rotation, lap count, or position coordinates.
-
-## Release directory
-
-`release/FH6-Radio-Clean-v0.2-windows/` is a complete Windows onedir preview with `_internal`, license notices, checksums, and a run guide. Keep the directory layout intact after extraction; do not copy only the executable.
-
-## Clean-room provenance
-
-This repository is an independently written v0.2 implementation based on product requirements and public protocol material. It does not copy the historical v0.1 implementation, extracted evidence, or older release directories. See [PROVENANCE.md](PROVENANCE.md) for scope, sources, and limitations.
+The application listens to FH6 Data Out locally and stores configuration and runtime logs in the user profile. It degrades safely with readable messages when Windows audio or input dependencies are unavailable. The original `地平线电台.exe` remains read-only, and legacy configurations and release directories stay isolated.
