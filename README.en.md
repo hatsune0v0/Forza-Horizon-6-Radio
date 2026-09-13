@@ -52,3 +52,8 @@ uv run pytest -q
 ## Privacy and Compatibility
 
 The application listens to FH6 Data Out locally and stores configuration and runtime logs in the user profile. It degrades safely with readable messages when Windows audio or input dependencies are unavailable. The original `地平线电台.exe` remains read-only, and legacy configurations and release directories stay isolated.
+
+## Original Version Source
+Thanks to ILLEMIUN for the authorization🎉
+
+【地平线6自定义电台-支持所有音乐播放软件-哔哩哔哩】 https://b23.tv/sFVwHlH
