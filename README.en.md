@@ -42,13 +42,6 @@ Run tests:
 uv run pytest -q
 ```
 
-## Documentation
-
-- [Standards index](docs/README.md)
-- [Release and packaging](docs/06-release-and-packaging.md)
-- [Bilingual implementation record](docs/21-bilingual-execution-2026-09-13.md)
-- [Development log](devlog/README.md)
-
 ## Privacy and Compatibility
 
 The application listens to FH6 Data Out locally and stores configuration and runtime logs in the user profile. It degrades safely with readable messages when Windows audio or input dependencies are unavailable. The original `地平线电台.exe` remains read-only, and legacy configurations and release directories stay isolated.
