@@ -18,6 +18,17 @@ FH6 Radio is a Windows desktop volume controller for Forza Horizon 6. It reads g
 - Cover selections and shortcut changes are saved immediately;
 - Runtime logs, theme-aware scrolling, and log export.
 
+<img width="606" height="570" alt="image" src="https://github.com/user-attachments/assets/4aff6d09-272c-4a7a-a966-5cac00598563" />
+
+<img width="606" height="726" alt="image" src="https://github.com/user-attachments/assets/2c440bf1-45e5-4654-8447-9f9d5ae2873d" />
+
+<img width="606" height="726" alt="image" src="https://github.com/user-attachments/assets/8a493df2-3e07-48f0-bbbc-55c1bf97fb5f" />
+
+<img width="606" height="726" alt="image" src="https://github.com/user-attachments/assets/448c2d22-6efa-4545-9edb-26e77f5232d6" />
+
+<img width="664" height="345" alt="image" src="https://github.com/user-attachments/assets/c3b71d1b-accf-4489-99de-a73c8b35086c" />
+
+
 ## Installation and Usage
 
 1. Download and extract `FH6-radio-1.1.0.zip` from GitHub Releases to a writable folder.
