@@ -15,8 +15,7 @@ FH6 Radio 是一个面向 Forza Horizon 6 的 Windows 桌面音量控制工具�
 - 中文/English、深色/浅色主题和键盘焦点状态；
 - 键盘快捷键与 XInput 手柄绑定，支持复合键输入；
 - 预置电台封面、上传封面和爬取封面模式；
-- 封面选择与快捷键输入完成后立即保存；
-- 运行日志、主题适配滚动条和日志导出。
+- 支持运行日志导出。
 
 <img width="540" height="570" alt="image" src="https://github.com/user-attachments/assets/7e690b65-65f2-49cc-bdd3-002e3cdb3601" />
 
