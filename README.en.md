@@ -38,6 +38,10 @@ FH6 Radio is a Windows desktop volume controller for Forza Horizon 6. It reads g
 
 Do not copy only the EXE. Keep `_internal` and sibling resources with it. Configuration is stored in `%APPDATA%\\FH6RadioV02`.
 
+## Important Notes
+
+This project has not been specifically tested with NetEase Cloud Music, Kugou Music, Apple Music, or Tencent Music. Therefore, the current version does not guarantee successful retrieval of album artwork from these platforms.
+
 ## Run From Source
 
 Requires Python 3.12 and [uv](https://docs.astral.sh/uv/):
