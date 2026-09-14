@@ -26,6 +26,8 @@ FH6 Radio 是一个面向 Forza Horizon 6 的 Windows 桌面音量控制工具�
 
 <img width="606" height="570" alt="image" src="https://github.com/user-attachments/assets/2727a8ff-257d-40b7-aaa0-db79a2e6cfd5" />
 
+<img width="664" height="345" alt="image" src="https://github.com/user-attachments/assets/4641f848-f875-4f23-a241-980062083a9e" />
+
 
 ## 安装与运行
 
