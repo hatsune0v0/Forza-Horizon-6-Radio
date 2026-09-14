@@ -42,13 +42,6 @@ uv run fh6-radio-v02-material
 uv run pytest -q
 ```
 
-## 项目文档
-
-- [标准文档索引](docs/README.md)
-- [发布与打包规范](docs/06-release-and-packaging.md)
-- [双语修正执行记录](docs/21-bilingual-execution-2026-09-13.md)
-- [开发日志](devlog/README.md)
-
 ## 隐私与兼容
 
 应用仅在本机监听 FH6 Data Out，并将配置和运行日志写入用户目录。缺少 Windows 音频或输入依赖时会安全降级并显示提示。原始 `地平线电台.exe` 保持只读，旧版本配置和发布目录彼此隔离。
