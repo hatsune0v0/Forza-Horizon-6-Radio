@@ -6,16 +6,16 @@
 
 当前发布版本：[FH6-radio-1.1.0](release-prep/FH6-radio-1.1.0/)。发布压缩包可从 GitHub Releases 获取。
 
-FH6 Radio 是一个面向 Forza Horizon 6 的 Windows 桌面音量控制工具。它接收游戏 Data Out 遥测，根据驾驶场景调整指定音频应用的音量，并提供 Material Design 风格的设置界面。
+FH6 Radio 是一个面向 Forza Horizon 6 的 Windows 桌面音量控制工具。通过接收游戏 Data Out 遥测，根据驾驶场景调整指定音频应用音量。
 
 ### 主要功能
 
-- 根据自由驾驶、比赛、转场、菜单/暂停和停止状态调整音量；
-- 选择一个可控音频应用，支持进程名和 EXE 路径匹配；
-- 中文/English、深色/浅色主题和键盘焦点状态；
-- 键盘快捷键与 XInput 手柄绑定，支持复合键输入；
-- 预置电台封面、上传封面和爬取封面模式；
-- 支持运行日志导出。
+- 根据自由驾驶、比赛、转场、菜单/暂停和停止状态调整音量
+- 选择一个可控音频应用，支持进程名和 EXE 路径匹配
+- 中文/English、深色/浅色主题和键盘焦点状态
+- 键盘快捷键与 XInput 手柄绑定，支持复合键输入
+- 预置电台封面、上传封面和爬取封面模式
+- 支持运行日志导出
 
 <img width="540" height="570" alt="image" src="https://github.com/user-attachments/assets/7e690b65-65f2-49cc-bdd3-002e3cdb3601" />
 
