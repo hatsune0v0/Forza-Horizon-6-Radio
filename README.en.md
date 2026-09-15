@@ -6,17 +6,17 @@
 
 Current release: [FH6-radio-1.1.0](release-prep/FH6-radio-1.1.0/). Download the ZIP from GitHub Releases.
 
-FH6 Radio is a Windows desktop volume controller for Forza Horizon 6. It reads game Data Out telemetry, adjusts a selected audio application's volume by driving context, and provides a Material Design settings interface.
+FH6 Radio is a Windows desktop volume controller for Forza Horizon 6. It reads game Data Out telemetry, adjusts a selected audio application's volume by driving context.
 
 ### Features
 
-- Context-aware volume for free roam, race, transition, menu/pause, and stopped states;
-- Select one controllable audio application by process name or EXE path;
-- Chinese/English, dark/light themes, and keyboard focus states;
-- Keyboard shortcuts and XInput controller bindings;
-- Preset covers, uploaded covers, and crawled cover mode;
-- Cover selections and shortcut changes are saved immediately;
-- Runtime logs, theme-aware scrolling, and log export.
+- Context-aware volume for free roam, race, transition, menu/pause, and stopped states
+- Select one controllable audio application by process name or EXE path
+- Chinese/English, dark/light themes, and keyboard focus states
+- Keyboard shortcuts and XInput controller bindings
+- Preset covers, uploaded covers, and crawled cover mode
+- Cover selections and shortcut changes are saved immediately
+- Runtime logs, theme-aware scrolling, and log export
 
 <img width="606" height="570" alt="image" src="https://github.com/user-attachments/assets/4aff6d09-272c-4a7a-a966-5cac00598563" />
 
